@@ -40,7 +40,7 @@ class UserService {
     if (!isPasswordValid) {
       throw new Error("Invalid Password");
     }
-    const token = jwt.sign({ userId: existingUser._id }, secret!);
+    const token = jwt.sign({ userId: existingUser._id, userRole: existingUser.role}, secret!);
     return token;
   }
 
