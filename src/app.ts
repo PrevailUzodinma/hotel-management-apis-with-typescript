@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 app.get('/', (req, res) => {
-  res.send("Welcome to the Navigation Page. Kingly add \"/api/v1/\" to the URL or go to \"https://www.postman.com\" to sign in to Postman and test the API end-points better");
+  res.send("Welcome to the Navigation Page. Kindly add \"/api/v1/\" to the URL or go to \"https://www.postman.com\" to sign in to Postman and test the API end-points better");
 })
 app.use("/api/v1/", router);
 
