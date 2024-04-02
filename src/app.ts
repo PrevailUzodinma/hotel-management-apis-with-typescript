@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 app.get('/', (req, res) => {
-  res.send("Welcome to the Navigation Page \"https://hotel-management-apis-with-typescript-2.onrender.com/api/v1/room-types\" to view all Room-Types \"https://hotel-management-apis-with-typescript-2.onrender.com/api/v1/rooms\" to view all Rooms\"https://www.postman.com\" to sign in to Postman to test APIs");
+  res.send("Welcome to the Navigation Page. Kingly add \"/api/v1/\" to the URL or go to \"https://www.postman.com\" to sign in to Postman and test the API end-points better");
 })
 app.use("/api/v1/", router);
 
