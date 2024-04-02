@@ -18,19 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 
 connectDB();
 
-
-
-// Set EJS as the view engine
-app.set('view engine', 'ejs');
-
-// Set the views directory
-app.set('views', path.join(__dirname, 'views'));
-
-// Define a route to render the home.ejs view
 app.get('/', (req, res) => {
-  res.render('home');
-});
-
+  res.send("Welcome to the Navigation Page \"https://hotel-management-apis-with-typescript-2.onrender.com/api/v1/room-types\" to view all Room-Types \"https://hotel-management-apis-with-typescript-2.onrender.com/api/v1/rooms\" to view all Rooms\"https://www.postman.com\" to sign in to Postman to test APIs");
+})
 app.use("/api/v1/", router);
 
 app.listen(port, () => {
