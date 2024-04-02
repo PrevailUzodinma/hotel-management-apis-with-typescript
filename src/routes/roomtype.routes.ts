@@ -6,11 +6,10 @@ import RoomtypeController from "../controllers/roomtype.controller";
 
 const router: Router = express.Router();
 
-router.use(authMiddleware);
 
-router.post("/", authorizationMiddleware(["admin"]), RoomtypeController.createRoomtype);
-router.patch("/:id", authorizationMiddleware(["admin"]), RoomtypeController.updateRoomtype);
-router.delete("/:id", authorizationMiddleware(["admin"]), RoomtypeController.deleteRoomtype);
+router.post("/", authMiddleware, authorizationMiddleware(["admin"]), RoomtypeController.createRoomtype);
+router.patch("/:id", authMiddleware, authorizationMiddleware(["admin"]), RoomtypeController.updateRoomtype);
+router.delete("/:id", authMiddleware, authorizationMiddleware(["admin"]), RoomtypeController.deleteRoomtype);
 router.get("/:id", RoomtypeController.fetchOne);
 router.get("/", RoomtypeController.fetchMany);
 
