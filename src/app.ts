@@ -1,4 +1,4 @@
-import express, { Application, Request, Response, NextFunction } from "express";
+import express, { Application} from "express";
 import router from "./routes/index.routes";
 import cors from "cors";
 /* import authenticate from './middlewares/authenticate';
@@ -10,7 +10,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app: Application = express();
-const port: string | number = process.env.PORT || 3000;
+const port: string | number = process.env.PORT || 4000;
 //const db_uri: string = process.env.DB_URI || '';
 
 // Allow requests from any origin
